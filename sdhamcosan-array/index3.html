@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = prompt("Nhap chu cua ban di:")
+        let UPPER = "ABCDEFGHJKLMNOPQRSTUVWXYZI"
+        let LOWER = "abcdefghjklmnopqrstuvwxyzi"
+        var result = [];
+        for (i=0;i<str.length;i++) {
+            if(UPPER.indexOf(str[i]) !== -1) {
+                result.push(str[i].toLocaleLowerCase());
+            } else if(LOWER.indexOf(str[i]) !== -1) {
+                result.push(str[i].toLocaleUpperCase());
+            } else {
+                result.push(str[i]);
+            }
+        } document.write(result.join(" "));
+    </script>
+</body>
+</html>
